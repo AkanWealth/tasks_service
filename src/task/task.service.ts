@@ -39,7 +39,7 @@ export class TaskService {
       }
 
       const userResponse = await this.httpService
-        .get(`http://localhost:4000/users/${assignedToId}`)
+        .get(`http://localhost:4001/users/${assignedToId}`)
         .pipe(
           catchError(() => {
             throw new NotFoundException(
